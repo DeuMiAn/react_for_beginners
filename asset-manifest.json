@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/react_study_movieapp/static/js/main.a324c744.js",
-    "index.html": "/react_study_movieapp/index.html",
-    "main.a324c744.js.map": "/react_study_movieapp/static/js/main.a324c744.js.map"
+    "main.js": "/react_for_beginners/static/js/main.a324c744.js",
+    "index.html": "/react_for_beginners/index.html",
+    "main.a324c744.js.map": "/react_for_beginners/static/js/main.a324c744.js.map"
   },
   "entrypoints": [
     "static/js/main.a324c744.js"
