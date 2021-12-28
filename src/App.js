@@ -7,15 +7,15 @@ import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 
 function App(){
-  return <Router>
+  return <Router basename={process.env.PUBLIC_URL}>
     <Switch>
-      <Route path={process.env.PUBLIC_URL+"/hello"}>
+      <Route path="/hello">
         <h1>Hello</h1>
       </Route>
-      <Route path={process.env.PUBLIC_URL+"/movie/:id"}>
+      <Route path="/movie/:id">
         <Detail />
       </Route>
-      <Route path={process.env.PUBLIC_URL+"/"}>
+      <Route path="/">
         <Home />
       </Route>
     </Switch>
