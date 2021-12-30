@@ -1,5 +1,6 @@
-import { useEffect, useState, useCallback } from "react/cjs/react.development";
+import { useEffect, useState, useCallback } from "react";
 import Movie from "../components/Movie";
+import styles from "./Home.module.css"
 
 function Home(){
     const[loading, setLoading]=useState(true);
@@ -10,6 +11,14 @@ function Home(){
     setPageNum(prev=>prev+1)
     setLoading(true);
     
+  }
+  const BtnBox=()=>{
+    return(
+  <div className={styles.home__btnBox}>
+          <button className={styles.home__btn} onClick={onClickBack}>이전</button>
+          <span className={styles.home__pagenum}>페이지 {pageNum}</span>
+          <button className={styles.home__btn} onClick={onClickPre}>다음</button>
+      </div>)
   }
   const onClickBack=()=>{
     if(pageNum<=1){
@@ -39,13 +48,10 @@ function Home(){
   },[getMovies,pageNum]);
   return ( 
   <div>
-    {loading ? <h1>Loading...</h1> 
-    : <div>
-      <div>
-          <button onClick={onClickBack}>이전</button>
-          <span>현재페이지{pageNum}</span>
-          <button onClick={onClickPre}>다음</button>
-        </div>
+    {loading ? <h1 className={styles.home__loading}>Loading...</h1> 
+    : <div className={styles.home}>
+      <h1 className={styles.home__title}>DeuMiAn Movies</h1>
+      <BtnBox />
       {movies.map(movie=> 
       <Movie 
       key={movie.id}
@@ -55,11 +61,7 @@ function Home(){
       summary={movie.summary} 
       genres={movie.genres}/>
         )}
-        <div>
-          <button onClick={onClickBack}>이전</button>
-          <span>현재페이지{pageNum}</span>
-          <button onClick={onClickPre}>다음</button>
-        </div>
+        <BtnBox />
         </div>
         }
         

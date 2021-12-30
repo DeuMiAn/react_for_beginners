@@ -1,0 +1,59 @@
+.MovieDetail {
+  height: 105vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.MovieDetail__imgBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.MovieDetail__Background__img {
+  width: 100vw;
+  min-width: 700px;
+  max-width: 1200px;
+}
+.MovieDetail__cover__img {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+}
+.MovieDetail__rr__box {
+  margin: 20px;
+}
+.MovieDetail__r__text {
+  color: white;
+  margin: 0px 10px;
+}
+
+.MovieDetail__title {
+  margin-top: 30px;
+  font-weight: 300;
+  color: white;
+}
+
+.MovieDetail__text {
+  margin: 20px;
+  color: white;
+}
+.MovieDetail__genres {
+  color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0px;
+}
+.MovieDetail__genres li {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.MovieDetail__torrentBox {
+  margin: 20px;
+  border: 1px solid white;
+}
